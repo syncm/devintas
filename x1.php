@@ -1,9 +1,12 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>pratimas 9.2</title>
 </head>
 <body>
+<h1>Kuku</h1>
 <?php
 
 class Mokinys {
@@ -33,7 +36,7 @@ class Mokinys {
     }
 
     function trimestroVidurkis() {
-        $trimestras = $this->trimestras();
+        $trimestras = $this->trimestras($m);
         return $this->vidurkis($trimestras);
     }
 } 
@@ -78,7 +81,6 @@ for ($i = 0; $i < count($mokiniai) - 1; $i++) {
             <?php foreach ($mokinys->pazymiai as $dalykas => $pazymiai): ?>
                 <div>
                     <?php echo $dalykas . ': ' . implode(', ', $pazymiai); ?>
-                    <?php echo ': ' ,$mokinys->vidurkis($pazymiai) ?>
                 </div>
             <?php endforeach; ?>
         </td>
